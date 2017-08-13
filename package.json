@@ -4,7 +4,9 @@
   "description": "Mr.yang 博客网站",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "cross-env NODE_ENV=developer webpack --config webpack.config.js",
+    "start": "cross-env NODE_ENV=developer webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/ymsupers/ibrother/issues"
   },
-  "homepage": "https://github.com/ymsupers/ibrother#readme"
+  "homepage": "https://github.com/ymsupers/ibrother#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "cross-env": "^5.0.5",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-template": "^5.6.0",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
+  }
 }
