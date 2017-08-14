@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const WebpackCommonJs = require('./webpack.common');
 const Merge = require('webpack-merge');
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = Merge(WebpackCommonJs, {
 
     devtool: 'cheap-module-source-map',
@@ -68,7 +68,8 @@ module.exports = Merge(WebpackCommonJs, {
             'process.env': {
                 'NODE_ENV': JSON.stringify('developer')
             }
-        })
+        }),
+        new ExtractTextPlugin('css/[name].min.css')
     ]
 
 });
