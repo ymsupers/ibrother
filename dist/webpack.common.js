@@ -2,6 +2,7 @@
  * Created by mr.yang on 2017/8/13.
  */
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
     entry: {
@@ -32,12 +33,23 @@ module.exports = {
                 }
             },
             {
+                test: /\.vue$/,
+                use: 'vue-loader'
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.s[ac]ss$/,
-                use: 'sass-loader'
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader','sass-loader']
+                })
+            },
+            {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'less-loader']
             },
             {
                 test: /\.(jpg|png|gif)$/,
@@ -54,5 +66,4 @@ module.exports = {
             }
         ]
     }
-
 };
