@@ -1,0 +1,40 @@
+section {
+  min-width: 1200px;
+}
+#header {
+    width: 100%;
+    min-width: 1200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+    .ibr-logo {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #27a25e;
+    }
+    .ibr-nav {
+      .ivu-menu-item-active,
+      .ivu-menu-item {
+        border: none !important;
+      }
+    }
+    .ibr-serach {
+      float: left;
+      margin-left: 55px;
+      .ivu-input-wrapper {
+        height: 36px;
+      }
+      input {
+        vertical-align: top;
+      }
+    }
+    .ibr-other {
+      text-align: center;
+      button {
+        margin-right: 5px;
+      }
+    }
+}
