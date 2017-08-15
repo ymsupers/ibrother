@@ -15,7 +15,7 @@ module.exports = Merge(WebpackCommonJs, {
 
     output: {
         path: path.join(__dirname, '../dist/assets/'),
-        publicPath: '',
+        publicPath: '/',
         filename: '[name].bundle.js',
         sourceMapFilename: '[name].map'
     },
