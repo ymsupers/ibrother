@@ -2,13 +2,17 @@
     <div id="header">
         <i-menu mode="horizontal"  active-name="1">
             <i-row>
-                <i-col span="4" class="ibr-logo">iBrother</i-col>
+                <i-col span="4" class="ibr-logo">
+                    <icon type="ios-paperplane" size="42" style="line-height: 60px; font-size: 42px;"></icon>
+                </i-col>
                 <i-col span="15" class="ibr-nav" >
-                    <i-menu-item name="1">首页</i-menu-item>
-                    <i-menu-item name="2">
-                        <icon type="ios-keypad"></icon>
-                        文章
-                    </i-menu-item>
+                    <router-link to="/"><i-menu-item name="1">首页</i-menu-item></router-link>
+                    <router-link to="/article">
+                        <i-menu-item name="2">
+                            <icon type="ios-keypad"></icon>
+                            文章
+                        </i-menu-item>
+                    </router-link>
                     <i-menu-item name="3"> 关于我</i-menu-item>
                     <div class="ibr-serach">
                         <i-input icon="ios-search-strong" placeholder="搜索" size="large"></i-input>
